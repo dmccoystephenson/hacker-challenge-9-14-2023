@@ -48,7 +48,7 @@ class Image:
         # print("Found " + str(len(adjacentPixels)) + " adjacent pixels.")
         return adjacentPixels
 
-recurseAdjacentInterpretation = False
+contiguousInterpretation = False
 
 image = Image(5)
 print("Before:\n" + image.toString())
@@ -65,7 +65,7 @@ targetPixel.color = targetColor
 # print("Changed color of target pixel from " + originalColor + " to " + targetPixel.color)
 adjacentPixels = image.setAdjacentPixelsToColor(targetPixel, originalColor, targetColor)
 
-if recurseAdjacentInterpretation:
+if contiguousInterpretation:
     for i in range(image.size):
         toAppend = []
         for ap in adjacentPixels:
